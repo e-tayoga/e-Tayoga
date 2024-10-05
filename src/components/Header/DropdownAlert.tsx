@@ -3,44 +3,45 @@ import Link from "next/link";
 import ClickOutside from "@/components/ClickOutside";
 import Image from "next/image";
 
-const notificationList = [
+// farmer alerts (about diseases, pests, etc.)
+const alertList = [
   {
     image: "/images/user/user-15.png",
-    title: "Piter Joined the Team!",
-    subTitle: "Congratulate him",
+    title: "New Disease Alert!",
+    subTitle: "Check your crops",
   },
   {
     image: "/images/user/user-02.png",
-    title: "New message received",
-    subTitle: "Devid sent you new message",
+    title: "New Pest Alert!",
+    subTitle: "Check your crops",
   },
   {
     image: "/images/user/user-26.png",
-    title: "New Payment received",
-    subTitle: "Check your earnings",
+    title: "Heavy Rain Alert!",
+    subTitle: "Protect your crops",
   },
   {
     image: "/images/user/user-28.png",
-    title: "Jolly completed tasks",
-    subTitle: "Assign her newtasks",
+    title: "Flood Alert!",
+    subTitle: "Protect your crops",
   },
   {
     image: "/images/user/user-27.png",
-    title: "Roman Joined the Team!",
-    subTitle: "Congratulate him",
+    title: "New Weather Alert!",
+    subTitle: "Check your crops",
   },
 ];
 
-const DropdownNotification = () => {
+const DropdownAlert = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [notifying, setNotifying] = useState(true);
+  const [alerting, setAlerting] = useState(true);
 
   return (
     <ClickOutside onClick={() => setDropdownOpen(false)} className="relative hidden sm:block">
       <li>
         <Link
           onClick={() => {
-            setNotifying(false);
+            setAlerting(false);
             setDropdownOpen(!dropdownOpen);
           }}
           href="#"
@@ -64,11 +65,11 @@ const DropdownNotification = () => {
             </svg>
 
             <span
-              className={`absolute -top-0.5 right-0 z-1 h-2.5 w-2.5 rounded-full border-2 border-gray-2 bg-red-light dark:border-dark-3 ${
-                !notifying ? "hidden" : "inline"
+              className={`absolute -top-0.5 right-0 z-1 h-2.5 w-2.5 rounded-full border-2 border-gray-2 bg-red dark:border-dark-3 ${
+                !alerting ? "hidden" : "inline"
               }`}
             >
-              <span className="absolute -z-1 inline-flex h-full w-full animate-ping rounded-full bg-red-light opacity-75"></span>
+              <span className="absolute -z-1 inline-flex h-full w-full animate-ping rounded-full bg-red opacity-75"></span>
             </span>
           </span>
         </Link>
@@ -79,7 +80,7 @@ const DropdownNotification = () => {
           >
             <div className="mb-5 flex items-center justify-between">
               <h5 className="text-lg font-medium text-dark dark:text-white">
-                Notifications
+                Alerts
               </h5>
               <span className="rounded-md bg-primary px-2 py-0.5 text-body-xs font-medium text-white">
                 5 new
@@ -87,7 +88,7 @@ const DropdownNotification = () => {
             </div>
 
             <ul className="no-scrollbar mb-5 flex h-auto flex-col gap-1 overflow-y-auto">
-              {notificationList.map((item, index) => (
+              {alertList.map((item, index) => (
                 <li key={index}>
                   <Link
                     className="flex items-center gap-4 rounded-[10px] p-2.5 hover:bg-gray-2 dark:hover:bg-dark-3"
@@ -123,7 +124,7 @@ const DropdownNotification = () => {
               className="flex items-center justify-center rounded-[7px] border border-primary p-2.5 font-medium text-primary hover:bg-blue-light-5 dark:border-dark-4 dark:text-dark-6 dark:hover:border-primary dark:hover:bg-blue-light-3 dark:hover:text-primary"
               href="#"
             >
-              See all notifications
+              See all alerts
             </Link>
           </div>
         )}
@@ -132,4 +133,4 @@ const DropdownNotification = () => {
   );
 };
 
-export default DropdownNotification;
+export default DropdownAlert;

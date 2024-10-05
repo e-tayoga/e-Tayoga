@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLaout";
 
 export const metadata: Metadata = {
-  title: "Next.js Form Elements Page | NextAdmin - Next.js Dashboard Kit",
+  title: "Next.js Form Elements Page | e-ⵟⴰⵢoⴳⴰ",
   description: "This is Next.js Form Elements page for NextAdmin Dashboard Kit",
 };
 

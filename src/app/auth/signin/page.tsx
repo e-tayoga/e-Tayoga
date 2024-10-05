@@ -7,7 +7,7 @@ import DefaultLayout from "@/components/Layouts/DefaultLaout";
 import Signin from "@/components/Auth/Signin";
 
 export const metadata: Metadata = {
-  title: "Next.js Login Page | NextAdmin - Next.js Dashboard Kit",
+  title: "Next.js Login Page | e-ⵟⴰⵢoⴳⴰ",
   description: "This is Next.js Login Page NextAdmin Dashboard Kit",
 };
 
@@ -29,14 +29,14 @@ const SignIn: React.FC = () => {
               <Link className="mb-10 inline-block" href="/">
                 <Image
                   className="hidden dark:block"
-                  src={"/images/logo/logo.svg"}
+                  src={"/images/logo/logo.jpeg"}
                   alt="Logo"
                   width={176}
                   height={32}
                 />
                 <Image
                   className="dark:hidden"
-                  src={"/images/logo/logo-dark.svg"}
+                  src={"/images/logo/logo.jpeg"}
                   alt="Logo"
                   width={176}
                   height={32}

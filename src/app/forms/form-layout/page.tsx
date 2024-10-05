@@ -7,7 +7,7 @@ import Link from "next/link";
 import InputGroup from "@/components/FormElements/InputGroup";
 
 export const metadata: Metadata = {
-  title: "Next.js Form Layout Page | NextAdmin - Next.js Dashboard Kit",
+  title: "Next.js Form Layout Page | e-ⵟⴰⵢoⴳⴰ",
   description: "This is Next.js Form Layout page for NextAdmin Dashboard Kit",
 };
 

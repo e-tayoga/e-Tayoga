@@ -11,7 +11,7 @@ const ChartFive: React.FC = () => {
   ];
 
   const options: ApexOptions = {
-    colors: ["#5750F1"],
+    colors: ["#22AD5C"],
     chart: {
       fontFamily: "Satoshi, sans-serif",
       type: "bar",
