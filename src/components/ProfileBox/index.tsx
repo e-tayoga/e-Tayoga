@@ -1,37 +1,10 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { Farmer } from "@/types/farmer";
-// Farmer = {
-//   firstName: string;
-//   lastName: string;
-//   email: string;
-//   personalPhoto: string;
-//   farmName: string;
-//   farmCountry: string;
-//   farmCity: string;
-//   farmAddress: string;
-//   farmPostalCode: string;
-//   farmLatitude: number;
-//   farmLongitude: number;
-//   xp: number;
-// };
+import farmerData from "@/data/farmerData";
+
 const ProfileBox = () => {
-  const farmer: Farmer = {
-    firstName: "Ahmed",
-    lastName: "Idrissi",
-    email: "iahmed@etayoga.ma",
-    personalPhoto: "/images/user/user-03.png",
-    farmName: "e-Tagoya",
-    farmCountry: "Morocco",
-    farmCity: "Rabat",
-    farmAddress: "Avenue Mohamed Ben Abdellah, Av. Regragui",
-    farmPostalCode: "10000",
-    farmLatitude: 34.020882,
-    farmLongitude: -6.84165,
-    xp: 500,
-  };
+  const farmer = farmerData;
   return (
     <>
       <div className="overflow-hidden rounded-[10px] bg-white shadow-1 dark:bg-gray-dark dark:shadow-card">
