@@ -5,6 +5,8 @@ import Link from "next/link";
 export default function SigninWithPassword() {
   const [data, setData] = useState({
     remember: false,
+    email: "iahmed@etayoga.ma",
+    password: "123456789",
   });
 
   return (
@@ -20,6 +22,7 @@ export default function SigninWithPassword() {
           <input
             type="email"
             placeholder="Enter your email"
+            value={data.email}
             name="email"
             className="w-full rounded-lg border border-stroke bg-transparent py-[15px] pl-6 pr-11 font-medium text-dark outline-none focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
           />
@@ -55,6 +58,7 @@ export default function SigninWithPassword() {
           <input
             type="password"
             name="password"
+            value={data.password}
             placeholder="Enter your password"
             autoComplete="password"
             className="w-full rounded-lg border border-stroke bg-transparent py-[15px] pl-6 pr-11 font-medium text-dark outline-none focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
@@ -129,12 +133,13 @@ export default function SigninWithPassword() {
       </div>
 
       <div className="mb-4.5">
-        <button
+        <Link
+          href="/farmer/dashboard"
           type="submit"
           className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-primary p-4 font-medium text-white transition hover:bg-opacity-90"
         >
-          Sign In
-        </button>
+          Login
+        </Link>
       </div>
     </form>
   );
