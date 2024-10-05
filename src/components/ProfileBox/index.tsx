@@ -2,21 +2,50 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+import { Farmer } from "@/types/farmer";
+// Farmer = {
+//   firstName: string;
+//   lastName: string;
+//   email: string;
+//   personalPhoto: string;
+//   farmName: string;
+//   farmCountry: string;
+//   farmCity: string;
+//   farmAddress: string;
+//   farmPostalCode: string;
+//   farmLatitude: number;
+//   farmLongitude: number;
+//   xp: number;
+// };
 const ProfileBox = () => {
+  const farmer: Farmer = {
+    firstName: "Ahmed",
+    lastName: "Idrissi",
+    email: "iahmed@etayoga.ma",
+    personalPhoto: "/images/user/user-03.png",
+    farmName: "e-Tagoya",
+    farmCountry: "Morocco",
+    farmCity: "Rabat",
+    farmAddress: "Avenue Mohamed Ben Abdellah, Av. Regragui",
+    farmPostalCode: "10000",
+    farmLatitude: 34.020882,
+    farmLongitude: -6.84165,
+    xp: 500,
+  };
   return (
     <>
       <div className="overflow-hidden rounded-[10px] bg-white shadow-1 dark:bg-gray-dark dark:shadow-card">
         <div className="relative z-20 h-35 md:h-65">
           <Image
-            src="/images/cover/cover-01.png"
+            src="/images/cover/cover-01.jpg"
             alt="profile cover"
             className="h-full w-full rounded-tl-[10px] rounded-tr-[10px] object-cover object-center"
             width={970}
             height={260}
             style={{
-              width: "auto",
-              height: "auto",
+              width: "100%",
+              height: "260",
+              objectFit: "cover",
             }}
           />
           <div className="absolute bottom-1 right-1 z-10 xsm:bottom-4 xsm:right-4">
@@ -56,14 +85,13 @@ const ProfileBox = () => {
           <div className="relative z-30 mx-auto -mt-22 h-30 w-full max-w-30 rounded-full bg-white/20 p-1 backdrop-blur sm:h-44 sm:max-w-[176px] sm:p-3">
             <div className="relative drop-shadow-2">
               <Image
-                src="/images/user/user-03.png"
+                src={farmer.personalPhoto || "/images/default-avatar.png"}
                 width={160}
                 height={160}
                 className="overflow-hidden rounded-full"
                 alt="profile"
               />
             </div>
-
             <label
               htmlFor="profilePhoto"
               className="absolute bottom-0 right-0 flex h-8.5 w-8.5 cursor-pointer items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90 sm:bottom-2 sm:right-2"
@@ -83,7 +111,6 @@ const ProfileBox = () => {
                   fill=""
                 />
               </svg>
-
               <input
                 type="file"
                 name="profilePhoto"
@@ -94,27 +121,44 @@ const ProfileBox = () => {
             </label>
           </div>
           <div className="mt-4">
-            <h3 className="mb-1 text-heading-6 font-bold text-dark dark:text-white">
-            Ahmed Idrissi
-            </h3>
-            <div className="mx-auto max-w-[200px] flex items-center justify-center gap-1 mt-2 mb-5.5 rounded-[5px] border border-stroke py-[9px] shadow-1 dark:border-dark-3 dark:bg-dark-2 dark:shadow-card">
-              <span className="font-medium text-primary border-r border-stroke px-4 dark:border-dark-3">Level 10</span>
-              <span className="text-body-sm text-dark dark:text-white px-4">
-                500 XP
+            <h2 className="text-xl font-semibold text-gray-800 dark:text-white">
+              {farmer.firstName} {farmer.lastName}
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300">{farmer.email}</p>
+            <div className="mx-auto mb-5.5 mt-2 flex max-w-[200px] items-center justify-center gap-1 rounded-[5px] border border-stroke py-[9px] shadow-1 dark:border-dark-3 dark:bg-dark-2 dark:shadow-card">
+              <span className="border-r border-stroke px-4 font-medium text-primary dark:border-dark-3">
+                Level 10
+              </span>
+              <span className="px-4 text-body-sm text-dark dark:text-white">
+                {farmer.xp} XP
               </span>
             </div>
-
-            <div className="mx-auto max-w-[720px]">
-              <h4 className="font-medium text-dark dark:text-white">
-                About Me
-              </h4>
-              <p className="mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque posuere fermentum urna, eu condimentum mauris
-                tempus ut. Donec fermentum blandit aliquet. Etiam dictum dapibus
-                ultricies. Sed vel aliquet libero. Nunc a augue fermentum,
-                pharetra ligula sed, aliquam lacus.
-              </p>
+          </div>
+          <div className="mt-4">
+            <h5 className="text-lg font-medium text-gray-800 dark:text-white">
+              Farm Information
+            </h5>
+            <p className="text-gray-600 dark:text-gray-300">
+              {farmer.farmName}
+            </p>
+            <p className="text-gray-600 dark:text-gray-300">
+              {farmer.farmCountry}, {farmer.farmCity}
+            </p>
+            <p className="text-gray-600 dark:text-gray-300">
+              {farmer.farmAddress}, {farmer.farmPostalCode}
+            </p>
+          </div>
+          <div className="mt-4">
+            <div className="mx-auto h-90 max-w-[600px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3222.1658970566373!2d-6.870176824389!3d33.98431177318261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76ce7f9462dd1%3A0x2e9c39cfa1d9e8d7!2sNational%20Higher%20School%20For%20Computer%20Science%20and%20Systems%20Analysis!5e1!3m2!1sen!2sma!4v1728122833664!5m2!1sen!2sma"
+                width="100%"
+                height="100%"
+                style={{ borderRadius: "10px" }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>
