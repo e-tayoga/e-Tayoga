@@ -1,0 +1,61 @@
+@startuml farmer_ucd
+
+left to right direction
+skinparam packageStyle rect
+actor Farmer
+
+rectangle "Farmer Use Case Diagram" {
+    (Login) as Login
+    (Register) as Register
+    (Logout) as Logout
+    (Chat with Virtual Assistant) as Chat
+    (View Dahsboard) as Dashboard
+    (Discuss in Forum) as Forum
+    (Send Alert) as SAlert
+    (Receive Alert) as RAlert
+    (Gain XP) as XP
+
+    Farmer -- Register
+    Farmer -- Logout
+    Farmer -- Chat
+    Farmer -- Dashboard
+    Farmer -- Forum
+    Farmer -- SAlert
+    Farmer -- RAlert
+    Farmer -- XP
+
+    Chat ..> Login : <<include>>
+    Dashboard ..> Login : <<include>>
+    Forum ..> Login : <<include>>
+    SAlert ..> Login : <<include>>
+    RAlert ..> Login : <<include>>
+    XP ..> Login : <<include>>
+}
+
+note left of Farmer
+    <b>Virtual Assistant:</b> 
+    helps in decision-making,
+    provides information on crops, 
+    weather, etc.
+
+    <b>Dashboard:</b> 
+    sum up statistics,
+    provide visual representation
+    of data.
+
+    <b>Forum:</b>
+    discuss with other farmers,
+    share knowledge, ask questions.
+
+    <b>Alerts:</b>
+    - receive alerts on weather,
+    crop diseases, etc.
+    - send alerts to the system
+    so it can be broadcasted.
+
+    <b>XP:</b>
+    gain experience points based
+    on activities.
+end note
+
+@enduml

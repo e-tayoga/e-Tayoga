@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: default
+  application:
+    name: server
+  datasource:
+    url: jdbc:postgresql://localhost:5432/etayoga_db
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: password
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true

@@ -1,0 +1,144 @@
+@startuml admin_ucd
+
+left to right direction
+skinparam packageStyle rect
+actor Admin
+
+rectangle "Admin Use Case Diagram" {
+    (Login) as Login
+    (Logout) as Logout
+    (View Dashboard) as Dashboard
+    (Manage Farmers) as Farmers
+    (Manage Alerts) as Alerts
+    (Manage Forum) as Forum
+    (Manage Virtual Assistant) as VA
+
+    Admin -- Logout
+    Admin -- Dashboard
+    Admin -- Farmers
+    Admin -- Alerts
+    Admin -- Forum
+    Admin -- VA
+
+    Dashboard ..> Login : <<include>>
+    Farmers ..> Login : <<include>>
+    Alerts ..> Login : <<include>>
+    Forum ..> Login : <<include>>
+    VA ..> Login : <<include>>
+}
+
+@enduml
+
+@startuml admin_ucd_farmers
+
+skinparam packageStyle rect
+actor Admin
+
+rectangle "Manage Farmers Use Case" {
+    (Manage Farmers) as Manage
+    (View Farmers) as View
+    (Add Farmer) as Add
+    (Edit Farmer) as Edit
+    (Delete Farmer) as Delete
+    (Search Farmers) as Search
+    (Filter Farmers) as Filter
+    (Login) as Login
+
+    Admin -r- Manage
+    Manage .r.> Login: <<include>>
+    Manage <-- View
+    Manage <-- Add
+    Manage <-- Edit
+    Manage <-- Delete
+    Manage <-- Search
+    Manage <-- Filter
+}
+
+@enduml
+
+@startuml admin_ucd_alerts
+
+skinparam packageStyle rect
+actor Admin
+
+rectangle "Manage Alerts Use Case" {
+    (Manage Alerts) as Manage
+    (View Alerts) as View
+    (Add Alert) as Add
+    (Edit Alert) as Edit
+    (Delete Alert) as Delete
+    (Search Alerts) as Search
+    (Filter Alerts) as Filter
+    (Login) as Login
+
+    Admin -r- Manage
+    Manage .r.> Login: <<include>>
+    Manage <-- View
+    Manage <-- Add
+    Manage <-- Edit
+    Manage <-- Delete
+    Manage <-- Search
+    Manage <-- Filter
+}
+
+@enduml
+
+@startuml admin_ucd_forum
+
+skinparam packageStyle rect
+actor Admin
+
+rectangle "Manage Forum Use Case" {
+    (Manage Forum) as Manage
+    (View Discussions) as View
+    (Close Discussion) as Close
+    (Delete Discussion) as Delete
+    (Add Comment) as AddCmt
+    (Edit Comment) as EditCmt
+    (Delete Comment) as DeleteCmt
+    (Login) as Login
+
+    Admin -r- Manage
+    Manage .r.> Login: <<include>>
+    Manage <-- View
+    Manage <-- Close
+    Manage <-- Delete
+    Manage <-- AddCmt
+    Manage <-- EditCmt
+    Manage <-- DeleteCmt
+}
+
+@enduml
+
+@startuml admin_ucd_va
+
+skinparam packageStyle rect
+actor Admin
+
+rectangle "Manage Virtual Assistant Use Case" {
+    (Manage Virtual Assistant) as Manage
+    (View Interactions) as ViewInteractions
+    (Configure Responses) as ConfigureResponses
+    (Manage FAQs) as ManageFAQs
+    (Add FAQ) as AddFAQ
+    (Edit FAQ) as EditFAQ
+    (Delete FAQ) as DeleteFAQ
+    (View Logs) as ViewLogs
+    (Search Interactions) as Search
+    (Filter Interactions) as Filter
+    (Login) as Login
+
+    Admin -r- Manage
+    Manage .r.> Login: <<include>>
+    Manage <-- ViewInteractions
+    Manage <-- ConfigureResponses
+    Manage <-- ManageFAQs
+    ManageFAQs <-- AddFAQ
+    ManageFAQs <-- EditFAQ
+    ManageFAQs <-- DeleteFAQ
+    Manage <-- ViewLogs
+    Manage <-- Search
+    Manage <-- Filter
+}
+
+@enduml

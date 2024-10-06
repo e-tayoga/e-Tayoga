@@ -1,0 +1,83 @@
+@startuml class_diagram
+
+interface UserDetails {}
+
+enum Role {
+    FARMER
+    ADMIN
+}
+
+class User implements UserDetails {
+    - id: int
+    - firstName: String
+    - lastName: String
+    - email: String
+    - password: String
+}
+
+class Admin extends User {
+    - department: String
+}
+
+class Farmer extends User {
+    - personalPhoto: String
+    - farmName: String
+    - location: String
+    - xp: int
+}
+
+User "*" -u- "1" Role
+
+class Alert {
+    - id: int
+    - title: String
+    - message: String
+    - type: String
+    - createdAt: Date
+}
+
+Farmer "*" -l- "*" Alert: "> receives"
+Alert "*" -r- "1" Farmer: "> sent by"
+
+class Category {
+    - id: int
+    - name: String
+    - description: String
+}
+
+class Forum {
+    - id: int
+    - title: String
+    - description: String
+    - createdAt: Date
+}
+
+Forum "*" -- "1" Category: "> belongs to"
+
+class Topic {
+    - id: int
+    - name: String
+    - description: String
+}
+
+class Discussion {
+    - id: int
+    - title: String
+    - description: String
+    - createdAt: Date
+}
+
+Discussion "*" -- "1" Topic: "> belongs to"
+
+class Comment {
+    - id: int
+    - message: String
+    - createdAt: Date
+    - isEdited: boolean
+}
+
+Farmer "1" -- "*" Forum: "> participates in"
+Forum "1" -r- "*" Discussion: "> contains"
+Discussion "1" -r- "*" Comment: "> has"
+
+@enduml
