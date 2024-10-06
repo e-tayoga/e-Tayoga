@@ -1,4 +1,4 @@
-import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
+import BreadcrumbFarmer from "@/components/Breadcrumbs/BreadcrumbFarmer";
 import { Metadata } from "next";
 import FarmerLayout from "@/components/Layouts/FarmerLayout";
 import ForumBox from "@/components/ForumBox";
@@ -12,7 +12,7 @@ const forum = () => {
   return (
     <FarmerLayout>
       <div className="mx-auto w-full max-w-[970px]">
-        <Breadcrumb pageName="Forum" />
+        <BreadcrumbFarmer pageName="Forum" />
 
         <ForumBox />
       </div>

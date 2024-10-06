@@ -30,7 +30,12 @@ const Header = (props: {
   const getCurrentPage = () => {
     const path = window.location.pathname;
     const page = path.split("/")[1];
-    setCurrentPage(page);
+    if (page === "") {
+      setCurrentPage("home");
+    } else {
+      setCurrentPage(page);
+    }
+    
   }
   useEffect(() => {
     getCurrentPage();
@@ -74,7 +79,7 @@ const Header = (props: {
           <ul className="flex items-center gap-4">
             {menuItems.map((item, index) => (
               <li key={index}>
-                <Link href={item.link} className={`font-medium text-dark dark:text-white ${currentPage.toLowerCase() === item.name ? "text-primary" : ""}`}>
+                <Link href={item.link} className={`font-medium ${currentPage === item.name.toLowerCase()  ? "text-primary dark:text-white" : "text-dark-4 hover:text-dark dark:text-gray-5 dark:hover:text-white"}`}>
                   {item.name}
                 </Link>
               </li>

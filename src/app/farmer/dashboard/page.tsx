@@ -1,5 +1,5 @@
 import FarmerLayout from "@/components/Layouts/FarmerLayout";
-import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
+import BreadcrumbFarmer from "@/components/Breadcrumbs/BreadcrumbFarmer";
 import DashboardBox from "@/components/DashboardBox";
 import { Metadata } from "next";
 import React from "react";
@@ -14,7 +14,7 @@ export default function Dashboard() {
     <>
       <FarmerLayout>
         <div className="mx-auto w-full max-w-[970px]">
-          <Breadcrumb pageName="Dashboard" />
+          <BreadcrumbFarmer pageName="Dashboard" />
 
           <DashboardBox />
         </div>

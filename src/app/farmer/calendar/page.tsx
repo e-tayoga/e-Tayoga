@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import FarmerLayout from "@/components/Layouts/FarmerLayout";
-import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
+import BreadcrumbFarmer from "@/components/Breadcrumbs/BreadcrumbFarmer";
 import CalendarBox from "@/components/CalenderBox";
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ const CalendarPage = () => {
   return (
     <FarmerLayout>
       <div className="mx-auto max-w-7xl">
-        <Breadcrumb pageName="Calendar" />
+        <BreadcrumbFarmer pageName="Calendar" />
 
         <CalendarBox />
       </div>
