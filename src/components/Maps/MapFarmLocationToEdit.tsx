@@ -19,10 +19,7 @@ const MapFarmLocationToEdit: React.FC = () => {
   });
 
   const [farmer, setFarmer] = useState<any>(farmerData);
-  const [farmLocation, setFarmLocation] = useState({
-    lat: farmer.farmLatitude,
-    lng: farmer.farmLongitude,
-  });
+  const [farmLocation, setFarmLocation] = useState(farmer.farmLocation);
   const [map, setMap] = useState<google.maps.Map | null>(null);
   const [currentPosition, setCurrentPosition] = useState({
     lat: 0,
@@ -70,8 +67,7 @@ const MapFarmLocationToEdit: React.FC = () => {
     }
     setFarmer({
       ...farmer,
-      farmLatitude: marker?.lat,
-      farmLongitude: marker?.lng,
+      farmLocation: marker
     });
   };
 

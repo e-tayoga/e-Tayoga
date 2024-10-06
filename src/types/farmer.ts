@@ -8,8 +8,10 @@ export type Farmer = {
   farmCity: string;
   farmAddress: string;
   farmPostalCode: string;
-  farmLatitude: number;
-  farmLongitude: number;
+  farmLocation: {
+    lat: number;
+    lng: number;
+  };
   farmPolygon: Array<{
     lat: number;
     lng: number;

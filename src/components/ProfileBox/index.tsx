@@ -125,7 +125,7 @@ const ProfileBox = () => {
           </div>
           <div className="mt-4">
             <div className="mx-auto h-full max-w-[600px]">
-              <MapFarmLocation />
+              <MapWithPolygon />
             </div>
           </div>
         </div>

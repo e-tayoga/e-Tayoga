@@ -19,10 +19,7 @@ const MapFarmLocation: React.FC = () => {
   });
 
   const farmer = farmerData;
-  const farmLocation = {
-    lat: farmer.farmLatitude,
-    lng: farmer.farmLongitude,
-  };
+  const farmLocation = farmer.farmLocation;
   const [map, setMap] = useState<google.maps.Map | null>(null);
 
   // Function to set the map type to satellite when the map loads

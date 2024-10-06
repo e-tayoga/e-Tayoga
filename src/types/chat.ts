@@ -1,10 +1,8 @@
 export type Chat = {
   active?: any;
-  seen?: boolean;
   avatar: string;
   name: string;
   text: string;
+  buttons?: any;
   time: string;
-  textCount: number;
-  dot: number;
 };

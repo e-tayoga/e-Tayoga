@@ -25,10 +25,7 @@ const MapWithPolygon: React.FC = () => {
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
   });
   const [farmer, setFarmer] = useState<Farmer>(farmerData);
-  const [farmLocation, setFarmLocation] = useState({
-    lat: farmer.farmLatitude,
-    lng: farmer.farmLongitude,
-  });
+  const [farmLocation, setFarmLocation] = useState(farmer.farmLocation);
   const [map, setMap] = useState<google.maps.Map | null>(null);
   const [currentPosition, setCurrentPosition] = useState({
     lat: 0,
@@ -71,6 +68,8 @@ const MapWithPolygon: React.FC = () => {
         { lat: location.lat(), lng: location.lng() },
       ];
       if (newCoords.length === 4) {
+        console.log(newCoords);
+        
         return newCoords; // Stop when 4 points are reached
       } else if (newCoords.length > 4) {
         resetMap();
