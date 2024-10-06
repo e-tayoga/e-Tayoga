@@ -1,10 +1,5 @@
-import React, { useState, useCallback, useEffect } from "react";
-import {
-  GoogleMap,
-  useJsApiLoader,
-  Marker,
-  InfoWindow,
-} from "@react-google-maps/api";
+import React, { useState, useCallback } from "react";
+import { GoogleMap, useJsApiLoader, InfoWindow } from "@react-google-maps/api";
 import farmerData from "@/data/farmerData";
 
 const containerStyle = {
@@ -12,14 +7,15 @@ const containerStyle = {
   height: "300px",
 };
 
+const farmer = farmerData;
+const farmLocation = farmer.farmLocation;
+
 const MapFarmLocation: React.FC = () => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
   });
 
-  const farmer = farmerData;
-  const farmLocation = farmer.farmLocation;
   const [map, setMap] = useState<google.maps.Map | null>(null);
 
   // Function to set the map type to satellite when the map loads

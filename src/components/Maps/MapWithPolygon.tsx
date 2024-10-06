@@ -14,18 +14,13 @@ const containerStyle = {
   height: "450px",
 };
 
-const center = {
-  lat: 34.27568,
-  lng: -6.603398, // Morocco
-};
-
 const MapWithPolygon: React.FC = () => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
   });
-  const [farmer, setFarmer] = useState<Farmer>(farmerData);
-  const [farmLocation, setFarmLocation] = useState(farmer.farmLocation);
+  const [farmer] = useState<Farmer>(farmerData);
+  const [farmLocation] = useState(farmer.farmLocation);
   const [map, setMap] = useState<google.maps.Map | null>(null);
   const [currentPosition, setCurrentPosition] = useState({
     lat: 0,
