@@ -1,6 +1,6 @@
 import { Topic, Category, Comment, Discussion, Forum } from "@/types/forum";
 
-export const topics: Topic[] = [
+export const topicsData: Topic[] = [
   {
     name: "Crops",
     description: "Discuss about crops and planting techniques",
@@ -15,7 +15,7 @@ export const topics: Topic[] = [
   },
 ];
 
-export const categories: Category[] = [
+export const categoriesData: Category[] = [
   {
     name: "General",
     description: "General discussions",
@@ -30,7 +30,7 @@ export const categories: Category[] = [
   },
 ];
 
-export const comments: Comment[] = [
+export const commentsData: Comment[] = [
   {
     farmerId: 1,
     message: "Hi, I'm a moroccan farmer",
@@ -53,13 +53,13 @@ export const comments: Comment[] = [
   },
 ];
 
-export const discussions: Discussion[] = [
+export const discussionsData: Discussion[] = [
   {
     id: 1,
     title: "Planting",
     description: "Discuss about planting techniques",
-    topic: topics[0],
-    comments: comments,
+    topic: topicsData[0],
+    comments: commentsData,
     createdAt: new Date().toLocaleTimeString("en-US", {
       hour: "numeric",
       minute: "numeric",
@@ -70,8 +70,8 @@ export const discussions: Discussion[] = [
     id: 2,
     title: "Pests",
     description: "Discuss about pests and how to prevent them",
-    topic: topics[1],
-    comments: comments,
+    topic: topicsData[1],
+    comments: commentsData,
     createdAt: new Date().toLocaleTimeString("en-US", {
       hour: "numeric",
       minute: "numeric",
@@ -80,13 +80,13 @@ export const discussions: Discussion[] = [
   },
 ];
 
-export const forums: Forum[] = [
+export const forumData: Forum[] = [
   {
     id: 1,
     title: "General",
     description: "General discussions",
-    category: categories[0],
-    discussions: discussions,
+    category: categoriesData[0],
+    discussions: discussionsData,
     createdAt: new Date().toLocaleTimeString("en-US", {
       hour: "numeric",
       minute: "numeric",
@@ -97,8 +97,8 @@ export const forums: Forum[] = [
     id: 2,
     title: "Technical",
     description: "Technical discussions",
-    category: categories[1],
-    discussions: discussions,
+    category: categoriesData[1],
+    discussions: discussionsData,
     createdAt: new Date().toLocaleTimeString("en-US", {
       hour: "numeric",
       minute: "numeric",
@@ -106,3 +106,5 @@ export const forums: Forum[] = [
     }),
   },
 ];
+
+export default forumData;
