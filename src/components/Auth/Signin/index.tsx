@@ -1,9 +1,12 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import SigninWithPassword from "../SigninWithPassword";
 
 export default function Signin() {
+  useEffect(() => {
+    localStorage.removeItem("selectedMenu");
+  }, []);
   return (
     <>
       {/* <GoogleSigninButton text="Sign in" />
