@@ -1,1 +1,1 @@
-# Front of e-Tayoga
+# Front of e-Tayoga Web Application

@@ -42,7 +42,6 @@ const menuGroups = [
         label: "Dashboard",
         route: "/farmer/dashboard",
       },
-      // virtual assistant
       {
         icon: (
           <svg
