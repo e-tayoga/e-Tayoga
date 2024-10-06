@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Chat } from "@/types/chat";
 import { useEffect, useState } from "react";
 import { botResponse, welcomingMsgs } from "@/data/chatData";
+import MapWithPolygon from "../Maps/MapWithPolygon";
 
 const history: Chat[] = welcomingMsgs;
 const response: Chat = botResponse;
@@ -24,12 +25,9 @@ const ChatCard = () => {
     setMessage("");
   };
   const sendBotMessage = () => {
-    setChatData([
-      ...chatData,
-      botResponse
-    ]);
+    setChatData([...chatData, botResponse]);
   };
- 
+
   return (
     <div className="relative col-span-12 rounded-[10px] bg-white shadow-1 dark:bg-gray-dark dark:shadow-card xl:col-span-4">
       <h4 className="mb-5.5 px-7.5 pt-7.5 text-body-2xlg font-bold text-dark dark:text-white">
@@ -38,10 +36,7 @@ const ChatCard = () => {
 
       <div className="h-[350px] overflow-y-scroll">
         {chatData.map((chat, key) => (
-          <div
-            className="flex items-start gap-4.5 px-7.5 py-3"
-            key={key}
-          >
+          <div className="flex items-start gap-4.5 px-7.5 py-3" key={key}>
             <div className="relative h-14 w-14 rounded-full">
               <Image
                 width={56}
@@ -70,19 +65,17 @@ const ChatCard = () => {
                   {chat.name}
                 </h5>
                 <p>
-                  <span
-                    className="mb-px text-body-sm font-medium text-dark-3 dark:text-dark-6"
-                  >
+                  <span className="mb-px text-body-sm font-medium text-dark-3 dark:text-dark-6">
                     {chat.text}
                   </span>
                 </p>
-                <div className="flex flex-wrap gap-2 my-1">
+                <div className="my-1 flex flex-wrap gap-2">
                   {chat.buttons &&
                     chat.buttons.map((button: any, key: any) => (
                       <button
                         key={key}
                         onClick={sendBotMessage}
-                        className="px-3 py-2 text-white text-left text-xs font-medium bg-green-light-2 rounded-full"
+                        className="rounded-full bg-green-light-2 px-3 py-2 text-left text-xs font-medium text-white"
                       >
                         {button.text}
                       </button>
