@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import farmerData from "@/data/farmerData";
+import MapFarmLocationToEdit from "../Maps/MapFarmLocationToEdit";
 
 const SettingBoxes = () => {
   const farmer = farmerData;
@@ -377,16 +378,8 @@ const SettingBoxes = () => {
                 Farm Location
               </h3>
             </div>
-            <div className="p-7 h-90">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3222.1658970566373!2d-6.870176824389!3d33.98431177318261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76ce7f9462dd1%3A0x2e9c39cfa1d9e8d7!2sNational%20Higher%20School%20For%20Computer%20Science%20and%20Systems%20Analysis!5e1!3m2!1sen!2sma!4v1728122833664!5m2!1sen!2sma"
-                width="100%"
-                height="100%"
-                style={{ borderRadius: "10px" }}
-                allowFullScreen={true}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+            <div className="p-7 h-full">
+              <MapFarmLocationToEdit />
             </div>
           </div>
         </div>

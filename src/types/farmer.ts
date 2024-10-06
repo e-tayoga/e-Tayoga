@@ -10,5 +10,9 @@ export type Farmer = {
   farmPostalCode: string;
   farmLatitude: number;
   farmLongitude: number;
+  farmPolygon: Array<{
+    lat: number;
+    lng: number;
+  }>;
   xp: number;
 };
