@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, ReactNode } from "react";
 import Sidebar from "@/components/Sidebar";
-import Header from "@/components/Header";
+import HeaderFarmer from "@/components/HeaderFarmer";
 
 export default function DefaultLayout({
   children,
@@ -19,9 +19,9 @@ export default function DefaultLayout({
 
         {/* <!-- ===== Content Area Star ===== --> */}
         <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
-          {/* <!-- ===== Header Star ===== --> */}
-          <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-          {/* <!-- ===== Header End ===== --> */}
+          {/* <!-- ===== HeaderFarmer Star ===== --> */}
+          <HeaderFarmer sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+          {/* <!-- ===== HeaderFarmer End ===== --> */}
 
           {/* <!-- ===== Main Content Star ===== --> */}
           <main>
