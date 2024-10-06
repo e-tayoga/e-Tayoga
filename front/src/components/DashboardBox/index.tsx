@@ -43,7 +43,7 @@ const DashboardBox: React.FC = () => {
         {Object.entries(groupedData).map(([key, group]) => (
           <FarmChart key={key} data={group} />
         ))}
-        {otherData.map((stat, index) => (
+        {/* {otherData.map((stat, index) => (
           <div key={index} className="rounded-[10px] bg-white px-7.5 pt-7.5 shadow-1 dark:bg-gray-dark dark:shadow-card">
             <div className="mb-9 justify-between gap-4 sm:flex">
               <div>
@@ -53,15 +53,15 @@ const DashboardBox: React.FC = () => {
               </div>
             </div>
 
-            {/* <div className="mb-8">
+            <div className="mb-8">
             <div className="mx-auto flex justify-center">
               <div className="text-body-2xlg font-bold text-dark dark:text-white">
                 {stat.value}
               </div>
             </div>
-          </div> */}
           </div>
-        ))}
+          </div>
+        ))} */}
       </div>
     </>
   );

@@ -1,12 +1,20 @@
 # e-Tayoga Web Application
 
+<div align=center>
+    <img src="https://img.shields.io/badge/NextJS-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="NextJS">
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
+    <img src="https://img.shields.io/badge/Sprint_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Sprint Boot">
+    <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+    <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify">
+    <img src="https://img.shields.io/badge/Google_Maps_API-4285F4?style=for-the-badge&logo=google-maps&logoColor=white" alt="Google Maps API">
+</div>
 
 ## Table of Contents
 - [About the Project](#about-the-project)
 - [Key Features](#key-features)
 - [Why e-Tayoga Matters](#why-e-tayoga-matters)
 - [Team Members](#team-members)
-- [Technologies](#technologies)
+
 
 ## About the Project
 
@@ -64,18 +72,6 @@ Our goal? To empower farmers with better insights through satellite data to make
 - **Maroua Chattat** – A senior year Engineering student in Geomatics and Topography at IAV, Maroua’s specialty is in spatial data. Her expertise helps us accurately map and analyze land use, making sure our agricultural insights are grounded (pun intended!) in the best possible geospatial information.
 
 Together, we hope to provide farmers with a tool that leads to more sustainable and efficient agricultural practices.
-
-
-## Technologies
-
-<div align=center>
-    <img src="https://img.shields.io/badge/NextJS-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="NextJS">
-    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
-    <img src="https://img.shields.io/badge/Sprint_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Sprint Boot">
-    <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
-    <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify">
-    <img src="https://img.shields.io/badge/Google_Maps_API-4285F4?style=for-the-badge&logo=google-maps&logoColor=white" alt="Google Maps API">
-</div>
 
 
 #
