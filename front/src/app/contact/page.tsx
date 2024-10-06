@@ -38,7 +38,7 @@ const Contact = () => {
     },
     {
       name: "Maroua Chattat",
-      title: "Surveyor-topographer",
+      title: "Topographer",
       linkedin: "https://www.linkedin.com/in/maroua-chattat-566039316/",
       image: "/images/team/team-5.jpg",
     }
