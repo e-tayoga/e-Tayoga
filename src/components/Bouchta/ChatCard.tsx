@@ -38,8 +38,7 @@ const ChatCard = () => {
 
       <div>
         {chatData.map((chat, key) => (
-          <Link
-            href="/"
+          <div
             className="flex items-center gap-4.5 px-7.5 py-3 hover:bg-gray-1 dark:hover:bg-dark-2"
             key={key}
           >
@@ -92,7 +91,7 @@ const ChatCard = () => {
                 <span className="text-xs">{chat.time}</span>
               </div>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
 

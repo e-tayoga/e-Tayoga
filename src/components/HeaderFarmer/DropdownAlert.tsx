@@ -1,13 +1,10 @@
 import { useState } from "react";
 import Link from "next/link";
 import ClickOutside from "@/components/ClickOutside";
-import Image from "next/image";
 import alertsData from "@/data/alertsData";
 import AlertWarning from "../Alerts/AlertWarning";
 import AlertError from "../Alerts/AlertError";
 
-// farmer alerts (about diseases, pests, etc.)
-// alert have: type, message, createdAt
 const alerts = alertsData;
 
 const DropdownAlert = () => {
@@ -75,10 +72,10 @@ const DropdownAlert = () => {
                     className="flex items-center gap-4 rounded-[10px] p-2.5 hover:bg-gray-2 dark:hover:bg-dark-3"
                     href="#"
                   >
-                    {alert.type === "warning" ? (
-                      <AlertWarning alert={alert} />
+                    {alert.type === "danger" ? (
+                      <AlertError key={index} alert={alert} />
                     ) : (
-                      <AlertError alert={alert} />
+                      <AlertWarning key={index} alert={alert} />
                     )}
                   </Link>
                 </li>

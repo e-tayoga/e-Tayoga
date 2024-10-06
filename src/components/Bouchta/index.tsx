@@ -1,6 +1,6 @@
 "use client";
 import React from 'react'
-import ChatCard from '../Chat/ChatCard'
+import ChatCard from './ChatCard';
 
 function Bouchta() {
   return (
