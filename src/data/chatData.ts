@@ -6,7 +6,11 @@ export const welcomingMsgs: Chat[] = [
     avatar: "/images/user/bouchta.png",
     name: "Bouchta",
     text: "Hello I'm Bouchta, your personal assistant. I'm here to assist you with your farm management.",
-    time: "Just now",
+    time: new Date().toLocaleTimeString("en-US", {
+      hour: "numeric",
+      minute: "numeric",
+      hour12: true,
+    }),
   },
   {
     active: true,
@@ -27,7 +31,11 @@ export const welcomingMsgs: Chat[] = [
         action: "optimization",
       },
     ],
-    time: "Just now",
+    time: new Date().toLocaleTimeString("en-US", {
+      hour: "numeric",
+      minute: "numeric",
+      hour12: true,
+    }),
   },
 ];
 
@@ -36,5 +44,9 @@ export const botResponse: Chat = {
   avatar: "/images/user/bouchta.png",
   name: "Bouchta",
   text: "I'm here to help you with your questions",
-  time: "Just now",
+  time: new Date().toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  }),
 };
