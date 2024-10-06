@@ -5,7 +5,7 @@ import Alerts from "@/components/Alerts";
 
 export const metadata: Metadata = {
   title: "Alerts | e-ⵟⴰⵢoⴳⴰ",
-  description: "This is Alerts page of e-Tagoya",
+  description: "This is Alerts page of e-Tayoga",
 };
 
 const alerts = () => {

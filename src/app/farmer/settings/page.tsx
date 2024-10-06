@@ -6,7 +6,7 @@ import SettingBoxes from "@/components/SettingBoxes";
 
 export const metadata: Metadata = {
   title: "Settings | e-ⵟⴰⵢoⴳⴰ",
-  description: "This is Settings page of e-Tagoya",
+  description: "This is Settings page of e-Tayoga",
 };
 
 const Settings = () => {
