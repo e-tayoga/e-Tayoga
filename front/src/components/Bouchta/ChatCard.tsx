@@ -72,13 +72,17 @@ const ChatCard = () => {
                 <div className="my-1 flex flex-wrap gap-2">
                   {chat.buttons &&
                     chat.buttons.map((button: any, key: any) => (
-                      <button
-                        key={key}
-                        onClick={sendBotMessage}
-                        className="rounded-full bg-green-light-2 px-3 py-2 text-left text-xs font-medium text-white"
-                      >
-                        {button.text}
-                      </button>
+                      // <button
+                      //   key={key}
+                      //   onClick={sendBotMessage}
+                      //   className="rounded-full bg-green-light-2 px-3 py-2 text-left text-xs font-medium text-white"
+                      // >
+                      //   {button.text}
+                      // </button>
+                      // replace the button with a link to the map
+                      <Link key={key} href="/farmer/map" className="rounded-full bg-green-light-2 px-3 py-2 text-left text-xs font-medium text-white">
+                          {button.text}
+                      </Link>
                     ))}
                 </div>
                 <span className="text-xs">{chat.time}</span>
