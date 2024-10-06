@@ -24,8 +24,8 @@ const dataStatsList = [
       </svg>
     ),
     color: "#3FD97F",
-    title: "Total Views",
-    value: "3.456K",
+    title: "Crop Health",
+    value: "75%",
     growthRate: 0.43,
   },
   {
@@ -46,8 +46,8 @@ const dataStatsList = [
       </svg>
     ),
     color: "#FF9C55",
-    title: "Total Profit",
-    value: "$42.2K",
+    title: "Water Usage",
+    value: "120L",
     growthRate: 4.35,
   },
   {
@@ -74,8 +74,8 @@ const dataStatsList = [
       </svg>
     ),
     color: "#8155FF",
-    title: "Total Product",
-    value: "2.450",
+    title: "Time to Harvest",
+    value: "3 Days",
     growthRate: 2.59,
   },
   {
@@ -112,9 +112,9 @@ const dataStatsList = [
       </svg>
     ),
     color: "#18BFFF",
-    title: "Total Users",
-    value: "3.465",
-    growthRate: -0.95,
+    title: "Growth Progress",
+    value: "90%",
+    growthRate: 0.95,
   },
 ];
 
