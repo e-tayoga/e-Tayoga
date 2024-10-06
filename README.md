@@ -77,3 +77,9 @@ Together, we hope to provide farmers with a tool that leads to more sustainable 
     <img src="https://img.shields.io/badge/Google_Maps_API-4285F4?style=for-the-badge&logo=google-maps&logoColor=white" alt="Google Maps API">
 </div>
 
+
+#
+
+<div align=center>
+    © 2022 e-Tayoga. All Rights Reserved.
+</div>
