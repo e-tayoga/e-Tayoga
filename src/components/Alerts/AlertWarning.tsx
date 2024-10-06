@@ -1,10 +1,20 @@
 import React from "react";
+import { Alert } from "@/types/alert";
 
-const AlertWarning = () => {
+const AlertWarning = ({ alert }: { alert: Alert }) => {
+  const formatAlertDate = (date: string) => {
+    return new Date(date).toLocaleString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+    });
+  };
   return (
     <>
-      <div className="flex w-full rounded-[10px] border-l-6 border-[#FFB800] bg-[#FEF5DE] px-7 py-8 dark:bg-[#1B1B24] dark:bg-opacity-30 md:p-9">
-        <div className="mr-5 flex h-9 w-9 items-center justify-center rounded-lg bg-[#FBBF24]">
+      <div className="flex w-full rounded-[10px] border-l-6 border-[#FFB800] bg-[#FEF5DE] p-3 dark:bg-[#1B1B24] dark:bg-opacity-30">
+        {/* <div className="mr-5 flex h-9 w-9 items-center justify-center rounded-lg bg-[#FBBF24]">
           <svg
             width="20"
             height="20"
@@ -19,16 +29,15 @@ const AlertWarning = () => {
               fill="white"
             />
           </svg>
-        </div>
+        </div> */}
         <div className="w-full">
           <h5 className="mb-3.5 text-lg font-bold leading-[22px] text-[#9D5425]">
-            Attention needed
+            {alert.type}
           </h5>
-          <p className="w-full max-w-[740px] text-[#D0915C]">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&apos;s standard dummy
-            text ever since the 1500s, when
-          </p>
+          <p className="w-full max-w-[740px] text-[#D0915C]">{alert.message}</p>
+          <span className="mt-3.5 text-[14px] text-[#D0915C]">
+            {formatAlertDate(alert.createdAt)}
+          </span>
         </div>
       </div>
     </>
