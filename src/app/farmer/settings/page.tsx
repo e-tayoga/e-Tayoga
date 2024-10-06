@@ -1,7 +1,7 @@
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 
 import { Metadata } from "next";
-import DefaultLayout from "@/components/Layouts/DefaultLaout";
+import FarmerLayout from "@/components/Layouts/FarmerLayout";
 import SettingBoxes from "@/components/SettingBoxes";
 
 export const metadata: Metadata = {
@@ -11,13 +11,13 @@ export const metadata: Metadata = {
 
 const Settings = () => {
   return (
-    <DefaultLayout>
+    <FarmerLayout>
       <div className="mx-auto w-full max-w-[1080px]">
         <Breadcrumb pageName="Settings" />
 
         <SettingBoxes />
       </div>
-    </DefaultLayout>
+    </FarmerLayout>
   );
 };
 

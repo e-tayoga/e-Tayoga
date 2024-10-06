@@ -1,7 +1,7 @@
 import React from "react";
 import FormElements from "@/components/FormElements";
 import { Metadata } from "next";
-import DefaultLayout from "@/components/Layouts/DefaultLaout";
+import FarmerLayout from "@/components/Layouts/FarmerLayout";
 
 export const metadata: Metadata = {
   title: "Next.js Form Elements Page | e-ⵟⴰⵢoⴳⴰ",
@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 
 const FormElementsPage = () => {
   return (
-    <DefaultLayout>
+    <FarmerLayout>
       <FormElements />
-    </DefaultLayout>
+    </FarmerLayout>
   );
 };
 

@@ -1,6 +1,6 @@
 import BasicChart from "@/components/Charts/BasicChart";
 import { Metadata } from "next";
-import DefaultLayout from "@/components/Layouts/DefaultLaout";
+import FarmerLayout from "@/components/Layouts/FarmerLayout";
 import React from "react";
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 
@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 
 const BasicChartPage: React.FC = () => {
   return (
-    <DefaultLayout>
+    <FarmerLayout>
       <Breadcrumb pageName="Basic Chart" />
 
       <BasicChart />
-    </DefaultLayout>
+    </FarmerLayout>
   );
 };
 

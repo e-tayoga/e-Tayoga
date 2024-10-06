@@ -1,27 +1,24 @@
 "use client";
 import React, { useState, ReactNode } from "react";
 import Sidebar from "@/components/Sidebar";
-import HeaderFarmer from "@/components/HeaderFarmer";
+import Header from "@/components/Header";
 
 export default function DefaultLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
       {/* <!-- ===== Page Wrapper Star ===== --> */}
       <div className="flex h-screen overflow-hidden">
-        {/* <!-- ===== Sidebar Star ===== --> */}
-        <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-        {/* <!-- ===== Sidebar End ===== --> */}
 
         {/* <!-- ===== Content Area Star ===== --> */}
         <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
-          {/* <!-- ===== HeaderFarmer Star ===== --> */}
-          <HeaderFarmer sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-          {/* <!-- ===== HeaderFarmer End ===== --> */}
+          {/* <!-- ===== Header Star ===== --> */}
+          <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+          {/* <!-- ===== Header End ===== --> */}
 
           {/* <!-- ===== Main Content Star ===== --> */}
           <main>

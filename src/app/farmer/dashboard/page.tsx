@@ -1,4 +1,4 @@
-import DefaultLayout from "@/components/Layouts/DefaultLaout";
+import FarmerLayout from "@/components/Layouts/FarmerLayout";
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 import DashboardBox from "@/components/DashboardBox";
 import { Metadata } from "next";
@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 export default function Dashboard() {
   return (
     <>
-      <DefaultLayout>
+      <FarmerLayout>
         <div className="mx-auto w-full max-w-[970px]">
           <Breadcrumb pageName="Dashboard" />
 
           <DashboardBox />
         </div>
-      </DefaultLayout>
+      </FarmerLayout>
     </>
   );
 }

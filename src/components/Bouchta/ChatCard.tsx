@@ -31,15 +31,15 @@ const ChatCard = () => {
   };
  
   return (
-    <div className="relative col-span-12 h-[500px] overflow-y-scroll rounded-[10px] bg-white py-6 shadow-1 dark:bg-gray-dark dark:shadow-card xl:col-span-4">
-      <h4 className="mb-5.5 px-7.5 text-body-2xlg font-bold text-dark dark:text-white">
+    <div className="relative col-span-12 rounded-[10px] bg-white shadow-1 dark:bg-gray-dark dark:shadow-card xl:col-span-4">
+      <h4 className="mb-5.5 px-7.5 pt-7.5 text-body-2xlg font-bold text-dark dark:text-white">
         Chat with Bouchta
       </h4>
 
-      <div>
+      <div className="h-[350px] overflow-y-scroll">
         {chatData.map((chat, key) => (
           <div
-            className="flex items-center gap-4.5 px-7.5 py-3 hover:bg-gray-1 dark:hover:bg-dark-2"
+            className="flex items-start gap-4.5 px-7.5 py-3"
             key={key}
           >
             <div className="relative h-14 w-14 rounded-full">
@@ -76,7 +76,7 @@ const ChatCard = () => {
                     {chat.text}
                   </span>
                 </p>
-                <div className="flex flex-wrap gap-2 mt-1">
+                <div className="flex flex-wrap gap-2 my-1">
                   {chat.buttons &&
                     chat.buttons.map((button: any, key: any) => (
                       <button
@@ -95,7 +95,7 @@ const ChatCard = () => {
         ))}
       </div>
 
-      <div className="absolute bottom-0 flex w-full items-center gap-4.5 bg-gray-1 px-7.5 py-3.5 dark:bg-dark-2">
+      <div className="flex w-full items-center gap-4.5 bg-gray-1 px-7.5 py-3.5 dark:bg-dark-2">
         <input
           type="text"
           placeholder="Type a message"
