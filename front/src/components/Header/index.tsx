@@ -13,8 +13,8 @@ const menuItems = [
     link: "/about",
   },
   {
-    name: "Services",
-    link: "/services",
+    name: "Features",
+    link: "/features",
   },
   {
     name: "Contact",

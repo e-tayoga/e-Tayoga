@@ -49,7 +49,7 @@ const Contact = () => {
         <Breadcrumb pageName="Contact" />
         <div className="rounded-[10px] bg-white shadow-1 dark:bg-gray-dark dark:shadow-card">
           {/* team members (image, full name, title, linkedin) */}
-          <div className="px-7.5 pt-7.5 pb-9">
+          <div className="px-7.5 pt-7.5 pb-9 text-center">
             <h4 className="text-body-2xlg font-bold text-dark dark:text-white">
               Our Team
             </h4>
